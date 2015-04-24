@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ 
+body {
+  line-height: 1;
+}
+ 
+ol, ul {
+  list-style: none;
+}
+ 
+blockquote, q {
+  quotes: none;
+}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+ 
+/**
+ * remember to define focus styles!
+ */
+:focus {
+  outline: 0;
+}
+ 
+/**
+ * remember to highlight inserts somehow!
+ */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+ 
+/**
+ * tables still need 'cellspacing="0"' in the markup
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+body{
+	background:url(images/bg.jpg) repeat-x, #FFF;
+	background-attachment:fixed;
+	font:12px Tahoma, Geneva, sans-serif;
+	color:#333333;
+	direction:rtl
+}
+a{
+	color:#0f3971;
+	text-decoration:none;
+}
+a:hover{
+	color:#4769a5
+}
+@font-face {
+    font-family: 'MitraBold';
+    src: url('fonts/WebMitraBold.eot');
+    src: url('fonts/WebMitraBold.eot#iefix') format('embedded-opentype'),
+         url('fonts/WebMitraBold.woff') format('woff'),
+         url('fonts/WebMitraBold.ttf') format('truetype'),
+         url('fonts/WebMitraBold.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mitra';
+    src: url('fonts/WebMitra.eot');
+    src: url('fonts/WebMitra.eot#iefix') format('embedded-opentype'),
+         url('fonts/WebMitra.woff') format('woff'),
+         url('fonts/WebMitra.ttf') format('truetype'),
+         url('fonts/WebMitra.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/******** sections **********/
+
+#container{
+	width:840px;
+	height:auto;
+	margin:20px auto;
+	position:relative;
+}
+
+#right{
+	width:220px;
+	float:right;
+	margin-right:5px;
+	margin-top:5px;
+	position:relative
+}
+#left{
+	width:610px;
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+#basicbg{
+	background:url(images/basicbg.png) repeat-y;
+	width:840px;
+	float:right
+}
+#basicbt{
+	background:url(images/basicbt.png) no-repeat;
+	width:840px;
+	height:20px;
+	float:right;
+}
+
+/********* header - top *********/
+
+header#header{
+	background:url(images/header.png) no-repeat;
+	width:840px;
+	height:105px;
+	float:right;
+}
+nav#topnav{
+	width:830px;
+	height:30px;
+	background:#dedce9;
+	margin-right:5px;
+	border-bottom:solid 1px #b3b0d0;
+	float:right;
+	margin-top:1px;
+}
+nav#topnav ul{
+	float:right;
+}
+nav#topnav li{
+	display:inline-block;
+	margin:5px;
+}
+nav#topnav p{
+	text-align:left;
+	margin:5px;
+}
+
+/****** right sidebar *******/
+
+aside.rightside{
+	width:220px;
+	background:#fdfeff;
+	float:right;
+	border:solid 1px #e0dff0;
+	margin-bottom:5px;
+}
+.rightside-title{
+	width:217px;
+	height:25px;
+	margin:1px 1px 0 0;
+	background:#dddce9;
+	float:right;
+}
+h3.rightside-title{
+	text-align:center;
+	font:14px MitraBold;
+	color:#0f3971;
+}
+.rscontent{
+	width:100%;
+	float:right
+}
+.rscontent ul{
+	text-align:center;
+	margin-top:5px;
+}
+.rscontent li{
+	float:right;
+	display:block;
+	background:#edeef7;
+	width:218px;
+	margin:1px 1px;
+	padding:0px 0;
+}
+.rscontent li a{
+	display:block;
+	padding:6px 0 8px 0;
+}
+.rscontent li a:hover{
+	background:#c1c1db;
+	color:#000;
+}
+
+.namayeasnad{
+	width:100%;
+	float:right
+}
+.namayeasnad ul{
+	float:right;
+	margin-top:5px;
+}
+.namayeasnad li{
+	display:block;
+	background:url(images/bullet.gif) no-repeat right center, #edeef7;
+	width:208px;
+	margin:1px 1px;
+	padding:6px 10px 8px 0;
+}
+.namayeasnad li a{
+	display:block;
+	
+}
+.namayeasnad li a:hover{
+	background:#c1c1db;
+	color:#000;
+}
+/********************** accordian menu **************************/
+.topnav {
+	direction:rtl;
+	width: 220px;
+	padding: 40px 28px 25px 0;
+	font-family: tahoma, Arial, Helvetica, sans-serif;
+	float:right;
+}
+ul.topnav {
+	padding: 0;
+	margin: 0;
+	margin-top:5px;	
+	font-size: 1em;
+	line-height: 0.5em;
+	list-style: none;
+}
+ul.topnav li {
+	background:#edeef7;
+	padding-left: 0;
+	list-style:none;
+}
+ul.topnav li a {
+    color: #8B8B8B;
+    display: block;
+    font-size: 12px;
+    line-height: 10px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {
+
+}
+ul.topnav ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+ul.topnav ul li {
+	margin: 1px 0 0 0;
+	padding: 0;
+	clear: both;
+	border-bottom:solid 1px #d8d9e9;
+	border-top:solid 1px #d8d9e9;
+}
+ul.topnav ul li a {
+    background: none repeat scroll 0 0 #e2e3f1;
+    color: #979ab8;
+    font-size: 12px;
+    font-weight: normal;
+    outline: 0 none;
+    padding-left: 20px;
+    text-shadow: none;
+
+}
+ul.topnav ul li a:hover {
+
+}
+ul.topnav ul ul li a {
+	background:#828282;
+	color: silver;
+	padding-left: 40px;
+	color: #F4F4F4;
+}
+ul.topnav ul ul li a:hover {
+}
+ul.topnav span {
+	float: right;
+}
+/***** left section *****/
+
+article.leftsection{
+	width:605px;
+	background:#fdfeff;
+	float:left;
+	border:solid 1px #e0dff0;
+	margin-bottom:5px;
+}
+.leftsection-title{
+	width:602px;
+	height:25px;
+	margin:1px 1px 0 0;
+	background:#dddce9;
+	float:right;
+}
+h3.leftsection-title{
+	text-align:right;
+	font:14px MitraBold;
+	color:#0f3971;
+}
+.lscontent{
+	width:98%;
+	float:right;
+	text-align:justify;
+	padding:5px;
+}	
+.lscontent fieldset{
+	border:solid 1px #cecbda;
+	padding-bottom:5px;
+}
+.lscontent fieldset:hover{
+	border:solid 1px #bdbacc;
+}
+.lscontent legend{
+	margin-right:10px;
+	padding:5px 10px 0px 5px;
+	color:#0f3971;
+	font:14px MitraBold;
+}
+.lscontent input{
+	float:right;
+	border:solid 1px #dedce9;
+	padding:5px 10px;
+	font:12px Tahoma, Geneva, sans-serif;
+	margin:4px 10px;
+}
+.lscontent select{
+	float:right;
+	border:solid 1px #dedce9;
+	padding:5px 10px;
+	font:12px Tahoma, Geneva, sans-serif;
+	margin:4px 10px;
+}
+.lscontent input:hover{
+	border:solid 1px #cecbda;
+}
+.lscontent input:focus{
+	border:solid 1px #c3c0d2;
+	box-shadow:0 0 5px #c3c0d2;
+}
+.lscontent input[type=submit]{
+	background:#d8d8e9;
+	padding:5px 10px;
+	cursor:pointer;
+	border:solid 1px #cecbda;
+}
+.ls-right{
+	float:right;
+	width:260px;
+	border:solid 1px #d8d9e9;
+	padding:5px 10px;
+	margin-right:10px;
+}
+.ls-right:hover{
+	background:#eff0f8;
+}
+.ls-left{
+	float:left;
+	width:260px;
+	border:solid 1px #d8d9e9;
+	padding:5px 10px;
+	margin-left:10px;
+}
+.ls-left:hover{
+	background:#eff0f8;
+}
+.informations{
+	width:557px;
+	max-width:570px;
+	background:url(images/exclamation.png) no-repeat right center,#eeeef7;
+	float:right;
+	margin:5px 0px;
+	padding:7px 30px 7px 5px;
+}
+.showresult{
+	width:560px;
+	background:url(images/result.png) no-repeat right center,#eeeef7;
+	float:right;
+	margin:5px -5px 0px 0;
+	padding:5px 40px 5px 5px;
+	border-bottom:solid 1px #e0dff0;
+	border-top:solid 1px #e0dff0;	
+	font:14px MitraBold;
+}
+.result{
+	width:595px;
+	float:right;
+	background:#f4f3fa;
+	min-height:50px;
+	margin:10px 0;
+	border:solid 1px #e8e7f2;
+	padding-bottom:5px;
+}
+.result-img{
+	float:right;
+	margin:10px 5px 5px 5px;
+	width:150px;
+}
+.result-img img{
+	width:100%;
+	border:solid 5px #e8e7f2;
+}
+.result-feild-sec{
+	float:left;
+	width:420px;
+	margin:5px;
+	margin-bottom:0;
+}
+.result-feild{
+	background:#e6e6f2;
+	font:12px Tahoma, Geneva, sans-serif;
+	padding:7px 5px;
+	margin:2px 3px;
+	float:right;
+}
+.result-feild strong{
+}
+.result-feild:hover{
+	background:#dad9ec;
+}
+.clear{
+	clear:both;
+	background:url(images/clear.jpg);
+	width:595px;
+	height:10px;
+	margin:10px 0px 5px 0;
+	float:right;
+}
+h2.Var{
+	float:right;
+	font:16px Mitrabold;
+	margin:15px 10px 10px 10px;
+}
