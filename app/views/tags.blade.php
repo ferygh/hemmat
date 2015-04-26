@@ -39,10 +39,10 @@
          <h3 class="rightside-title"> تفکیک نموداری </h3>
         </div> 
         <div class="rscontent">
-            <li><a href="http://hemmat.dev/stat/state">بر اساس استان</a></li>
-            <li><a href="http://hemmat.dev/stat/insurance">بر اساس بیمه</a></li>
-            <li><a href="http://hemmat.dev/stat/income">بر اساس درآمد</a></li>
-            <li><a href="http://hemmat.dev/stat/aid">بر اساس نوع کمک</a></li>
+            <li>{{link_to_route('stat_state','بر اساس استان')}}<li>
+            <li>{{link_to_route('stat_income','بر اساس درآمد')}}<li>
+            <li>{{link_to_route('stat_insurance','بر اساس بیمه')}}<li>
+            <li>{{link_to_route('stat_aid','بر اساس نوع کمک')}}<li>
         </div>
 </ul>
 </div>
