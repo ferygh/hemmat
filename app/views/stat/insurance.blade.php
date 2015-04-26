@@ -40,7 +40,7 @@ window.onload = function () {
 		data: [
 		{        
 			type: "pie",       
-			indexLabelFontFamily: "Garamond",       
+			indexLabelFontFamily: "Tahoma",       
 			indexLabelFontSize: 10,
 			indexLabel: "{label} {y}",
 			startAngle:-20,      

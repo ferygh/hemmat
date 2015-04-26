@@ -24,16 +24,20 @@ window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer",
 	{
 		title:{
-			text:"{{$text}}" 
+			text:"{{$text}}" ,
+			horizontalAlign: "right",
+			fontFamily: "Tahoma",
+			fontSize: 20
 		},
-                animationEnabled: true,
+
+               animationEnabled: true,
 		legend:{
-			verticalAlign: "center",
-			horizontalAlign: "left",
-			fontSize: 20,
-			fontFamily: "Helvetica"        
+			verticalAlign: "bottom",
+			horizontalAlign: "center",
+			fontSize: 17,
+			fontFamily: "Tahoma"        
 		},
-		theme: "theme2",
+		theme: "theme3",
 		data: [
 		{        
 			type: "pie",       
