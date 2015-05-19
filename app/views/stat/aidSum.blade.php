@@ -1,11 +1,11 @@
 <script type="text/javascript" src="{{asset('js/canvasjs.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.canvasjs.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/scriptbreaker-multiple-accordion-1.js')}}"></script>
 <link rel="stylesheet" href="{{asset('css/calendar-blue.css')}}">
 <script src="{{asset('js/jalali.js')}}"></script>
 <script src="{{asset('js/calendar.js')}}"></script>
 <script src="{{asset('js/calendar-setup.js')}}"></script>
 <script src="{{asset('js/calendar-fa.js')}}"></script>
-
 
 @extends('master')
 @section('title')
@@ -52,9 +52,9 @@ window.onload = function () {
 			showInLegend: true,
 			toolTipContent:"{legendText} {y}",
 			dataPoints: [
-				@foreach($aid_info as $aid)
-					{  y: {{$aid->total}}, legendText:"{{Aid::find($aid->aid_id)->title}}", label: "{{Aid::find($aid->aid_id)->title}}" },
-				@endforeach
+					@foreach($aidSum as $aid)
+						{  y: {{$aid->sum}}, legendText:"{{Aid::find($aid->aid_id)->title}}", label: "{{Aid::find($aid->aid_id)->title}}" },
+					@endforeach
 			]
 		}
 		]
@@ -65,8 +65,8 @@ window.onload = function () {
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <div class="lscontent">
 <fieldset>
-<legend> جستجو در یک بازه زمانی خاص </legend>
-            {{Form::open(['route'=>'stat_aid','method'=>'GET'])}}
+            <legend> جستجو در یک بازه زمانی خاص </legend>
+            {{Form::open(['route'=>'stat_aidSum','method'=>'GET'])}}
                 <div class="ls-right">
                     {{Form::text('start',null,['style'=>"width:230px; margin-right:5px;", 
                     'id'=>'date', 'placeholder'=>'از تاریخ'])}}
@@ -101,4 +101,6 @@ window.onload = function () {
                 از تقویم ارائه شده استفاده کنید.
             </div>
         </fieldset>
+    </div>
+ 
 @endsection

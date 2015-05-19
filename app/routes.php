@@ -31,6 +31,7 @@ Route::group(['before'=>'auth'], function() {
     Route::get('stat/income', ['as'=>'stat_income', 'uses'=>'statController@income']);
     Route::get('stat/insurance', ['as'=>'stat_insurance', 'uses'=>'statController@insurance']);
     Route::get('stat/aid', ['as'=>'stat_aid', 'uses'=>'statController@aid']);
+    Route::get('stat/aidSum', ['as'=>'stat_aidSum', 'uses'=>'statController@aidSum']);
 
 
 
@@ -48,6 +49,7 @@ Route::group(['before'=>'auth'], function() {
     Route::post('incomes', 'incomeController@create');
     Route::post('insurances', 'insuranceController@create');
     Route::post('user/change_password', 'userController@postChangePassword');
+    Route::post('stat/search', ['as'=>'searchaidByDate', 'uses'=>'statController@searchaidByDate']);
 
    /* Route::group(['prefix'=>'stat'], function(){
         Route::get('state/{month}',['as'=>'stat_state','uses'=>'statController@state']);
